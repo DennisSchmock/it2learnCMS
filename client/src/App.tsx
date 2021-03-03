@@ -1,7 +1,11 @@
 import React from 'react'
+import Components from '@/components/'
 
-const App = ({ title }: { title: string }): JSX.Element => (
-  <div>{title} and then some</div>
+const App = ({ title }: { title: string }) => (
+  <div>
+    {title} and then some
+    <Components />
+  </div>
 )
 
 export default App

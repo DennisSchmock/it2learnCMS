@@ -5,9 +5,10 @@
     "prettier",
     "plugin:react/recommended",
     "plugin:@typescript-eslint/recommended",
-    "plugin:import/typescript"
+    "plugin:import/typescript",
+    "plugin:@typescript-eslint/recommended-requiring-type-checking"
   ],
-  "plugins": ["prettier"],
+  "plugins": ["prettier", "@typescript-eslint", "import"],
   "parserOptions": {
     "ecmaVersion": 2018, // Allows for the parsing of modern ECMAScript features
     "sourceType": "module", // Allows for the use of imports
@@ -38,8 +39,11 @@
     ]
   },
   "settings": {
-    "react": {
-      "version": "detect" // Tells eslint-plugin-react to automatically detect the version of React to use
+    "import/resolver": {
+      "typescript": {
+        "project": "./client/tsconfig.json",
+        "tsconfigRootDir": "./client/"
+      }
     }
   }
 }
