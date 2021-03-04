@@ -14,7 +14,9 @@
     "sourceType": "module", // Allows for the use of imports
     "ecmaFeatures": {
       "jsx": true // Allows for the parsing of JSX
-    }
+    },
+    "project": "./tsconfig.json",
+    "tsconfigRootDir": "./"
   },
   "env": {
     "browser": true,
@@ -41,8 +43,8 @@
   "settings": {
     "import/resolver": {
       "typescript": {
-        "project": "./client/tsconfig.json",
-        "tsconfigRootDir": "./client/"
+        "project": "./tsconfig.json",
+        "tsconfigRootDir": "./"
       }
     }
   }
