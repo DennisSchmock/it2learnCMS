@@ -1,10 +1,11 @@
 import React from 'react'
-import Components from '@/components/'
+import RootRoutes from 'common/RootRoutes'
+import { RenderRoutes } from './common/router'
 
-const App = ({ title }: { title: string }) => (
+const App = ({ title }: { title: string }): JSX.Element => (
   <div>
     {title} and then some
-    <Components />
+    <RenderRoutes routes={RootRoutes} />
   </div>
 )
 
