@@ -1,11 +1,14 @@
 import React from 'react'
 import RootRoutes from 'common/RootRoutes'
 import { RenderRoutes } from './common/router'
+import Header from './components/Header'
+import Footer from './components/Footer'
 
-const App = ({ title }: { title: string }): JSX.Element => (
+const App = (): JSX.Element => (
   <div>
-    {title} and then some
+    <Header />
     <RenderRoutes routes={RootRoutes} />
+    <Footer />
   </div>
 )
 

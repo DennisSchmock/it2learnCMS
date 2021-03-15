@@ -24,6 +24,7 @@
     "node": true
   },
   "rules": {
+    "react/require-default-props": 0,
     "prettier/prettier": ["error", { "endOfLine": "auto" }],
     "react/jsx-filename-extension": 0,
     "import/no-extraneous-dependencies": 0,
