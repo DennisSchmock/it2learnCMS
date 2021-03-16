@@ -6,7 +6,7 @@ interface FooterProps {
 }
 
 const Footer = ({ children }: FooterProps): JSX.Element => (
-  <Styled.Footer>Footer{children}</Styled.Footer>
+  <Styled.Footer>Footer Placeholder{children}</Styled.Footer>
 )
 
 export default Footer
