@@ -1,5 +1,8 @@
 import React, { FC } from 'react'
+import Styled from './styled'
 
-const HomePage: FC = () => <div>Main is rendering</div>
+const HomePage: FC = () => (
+  <Styled.Container>Main is rendering</Styled.Container>
+)
 
 export default HomePage

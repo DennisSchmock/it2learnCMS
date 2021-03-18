@@ -8,7 +8,7 @@ const RootRoute: RouteProps[] = [
     key: 'ROOT',
     exact: true,
     // eslint-disable-next-line react/display-name
-    component: () => <div>TEST</div>,
+    component: main.screens.MainScreen,
   },
 ]
 

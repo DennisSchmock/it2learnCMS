@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
-const Header = styled.div`
+const Brand = styled.div`
   background-color: wheat;
 `
 
-export default { Header }
+export default { Brand }
