@@ -10,6 +10,7 @@ const useViewport = (): { width: number } => {
       window.removeEventListener('resize', handleWindowResize)
     }
   }, [])
+
   return { width }
 }
 

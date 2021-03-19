@@ -2,7 +2,7 @@ import React from 'react'
 import RootRoutes from 'common/RootRoutes'
 import { createGlobalStyle } from 'styled-components'
 import { RenderRoutes } from './common/router'
-import Header from './components/Header'
+import Header from './components/Brand'
 import Footer from './components/Footer'
 
 const GlobalStyle = createGlobalStyle`
@@ -11,7 +11,6 @@ html,body {
   margin: 0;
 }
 `
-
 const App = (): JSX.Element => (
   <>
     <GlobalStyle />
