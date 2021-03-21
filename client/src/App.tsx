@@ -4,6 +4,7 @@ import { createGlobalStyle } from 'styled-components'
 import { RenderRoutes } from './common/router'
 import Header from './components/Brand'
 import Footer from './components/Footer'
+import ContentContainer from './components/ContentContainer'
 
 const GlobalStyle = createGlobalStyle`
 html,body {
@@ -16,7 +17,9 @@ const App = (): JSX.Element => (
     <GlobalStyle />
     <div>
       <Header />
-      <RenderRoutes routes={RootRoutes} />
+      <ContentContainer>
+        <RenderRoutes routes={RootRoutes} />
+      </ContentContainer>
       <Footer />
     </div>
   </>

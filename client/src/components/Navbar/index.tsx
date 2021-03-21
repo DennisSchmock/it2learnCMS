@@ -17,11 +17,11 @@ const Navbar = ({
   brand,
   links,
 }: NavbarProps): JSX.Element => {
-  const [showNavbar, setShowNavbar] = useState(true)
+  const [toggleNavbarHeight, setToggleNavbarHeight] = useState(true)
   const [scrollPos, setScrollPos] = useState(0)
   const handleScroll = (): void => {
     setScrollPos(window.pageYOffset)
-    setShowNavbar(window.pageYOffset < 20)
+    setToggleNavbarHeight(window.pageYOffset < 20)
     console.log(scrollPos)
   }
 
@@ -34,7 +34,7 @@ const Navbar = ({
 
   console.log(brand, links)
   return (
-    <Styled.NavbarContainer showNavbar={showNavbar}>
+    <Styled.NavbarContainer toggleNavbarHeight={toggleNavbarHeight}>
       {children}
     </Styled.NavbarContainer>
   )

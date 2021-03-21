@@ -1,5 +1,10 @@
 const PAGE_WRAP = '1298px'
 
+const NAVBAR_FULL_HEIGHT = '120px'
+const NAVBAR_FOLDED_HEIGHT = '50px'
+
 export default {
   PAGE_WRAP,
+  NAVBAR_FULL_HEIGHT,
+  NAVBAR_FOLDED_HEIGHT,
 }
