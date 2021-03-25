@@ -1,12 +1,18 @@
 import React from 'react'
-import Navbar from '../Navbar'
 import Styled from './styled'
 
 // Placeholder for Brand Component
-const Brand = (): JSX.Element => (
-  <Navbar>
-    <Styled.Brand>Brand Placeholder</Styled.Brand>
-  </Navbar>
-)
+interface BrandProps {
+  image?: string
+  text?: string
+}
+const Brand = ({ image, text }: BrandProps): JSX.Element => {
+  console.log(text)
+  return (
+    <Styled.Brand>
+      {image ? <Styled.BrandLogo src={image} /> : <div>text</div>}
+    </Styled.Brand>
+  )
+}
 
 export default Brand

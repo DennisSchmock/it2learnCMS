@@ -1,5 +1,5 @@
 import React from 'react'
-import main from '@/features/main'
+import main from '@/scenes/main'
 import { RouteProps } from './types'
 
 const RootRoute: RouteProps[] = [

@@ -1,6 +1,6 @@
 import { RouteProps } from '@/common/types'
 import MainScreen from '../Screens/MainScreen'
-import TestPage from '../components/TestScreen'
+import TestPage from '../Screens/TestScreen'
 
 const MainRoutes: RouteProps[] = [
   {

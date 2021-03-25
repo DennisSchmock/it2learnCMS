@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import theme from '@/theme'
 
 const Container = styled.div`
-  padding-top: ${theme.sizes.NAVBAR_FULL_HEIGHT};
+  padding-top: ${theme.sizes.HEADER_FULL_HEIGHT};
   text-align: left;
   margin: 0 auto;
   min-height: 100vh;
