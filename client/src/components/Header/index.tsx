@@ -7,7 +7,7 @@ interface Links {
   path: string
 }
 
-interface HeaderProps {
+export interface HeaderProps {
   brand?: string
   brandAlignment?: 'left' | 'center' | 'right'
   links?: Links[]
