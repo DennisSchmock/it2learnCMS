@@ -22,6 +22,16 @@ module.exports = {
           name: 'images/[name].[ext]',
         },
       },
+      // {
+      //   test: /\.json$/,
+      //   loader: 'json-loader',
+      // },
+      {
+        test: /\.(woff|woff2)$/,
+        use: {
+          loader: 'url-loader',
+        },
+      },
     ],
   },
   resolve: {

@@ -1,8 +1,8 @@
-interface BreakpointProps {
+export interface BreakpointProps {
   [key: string]: string
 }
 
-export const breakpoints: BreakpointProps = {
+const breakpoints: BreakpointProps = {
   xs: '480px',
   sm: '768px',
   md: '992px',
@@ -10,7 +10,8 @@ export const breakpoints: BreakpointProps = {
   xl: '1400px',
 }
 
-export default { breakpoints }
+const mobileBreakpoint = 992
+export { breakpoints, mobileBreakpoint }
 
 // export const breakpoints = new Map([
 //   ['xsMobile', '480px'],

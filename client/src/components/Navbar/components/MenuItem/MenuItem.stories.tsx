@@ -16,4 +16,12 @@ const Template: Story<MenuItemProps> = (args) => (
 )
 export const Primary = Template.bind({})
 
-Primary.args = { path: '/', name: 'MenuItem' }
+Primary.args = {
+  navigation: {
+    title: 'Main',
+    enabled: true,
+    navigation: {
+      path: '/',
+    },
+  },
+}

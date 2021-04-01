@@ -1,26 +1,37 @@
 import React from 'react'
-import Styled, { PositionProps } from './styled'
+import Styled, { Position } from './styled'
 
-export interface MenuItemProps {
-  name: string
-  path: string
+export type MenuItemProps = {
+  navigation: Navigation
   icon?: string
-  groupedFirst?: boolean
-  groupedMiddel?: boolean
-  groupedLast?: boolean
+  position: Position
+  selected?: boolean
+  anchoredMenu?: boolean
+}
+
+export type Navigation = {
+  title: string
+  enabled: boolean
+  navigation: {
+    path: string
+  }
 }
 
 const MenuItem = ({
-  name,
-  path,
-  icon,
-  ...props
+  navigation,
+  position,
+  selected,
+  anchoredMenu,
 }: MenuItemProps): JSX.Element => {
-  console.log(icon)
+  console.log(`pos:${position}`)
   return (
-    <Styled.MenuItemContainer positionProps={props}>
-      <Styled.MenuItemLink to={path}>
-        <Styled.MenuItemText>{name}</Styled.MenuItemText>
+    <Styled.MenuItemContainer
+      selected={selected}
+      anchoredMenu={anchoredMenu}
+      position={position}
+    >
+      <Styled.MenuItemLink to={navigation.navigation.path}>
+        <Styled.MenuItemText>{navigation.title}</Styled.MenuItemText>
       </Styled.MenuItemLink>
     </Styled.MenuItemContainer>
   )

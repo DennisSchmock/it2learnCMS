@@ -1,6 +1,6 @@
 const PAGE_WRAP = '1298px'
 
-const HEADER_FULL_HEIGHT = '120px'
+const HEADER_FULL_HEIGHT = '80px'
 const HEADER_FOLDED_HEIGHT = '50px'
 const MARGINS = [8, 12, 16, 20, 26]
 export default {

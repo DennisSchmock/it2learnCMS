@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+
 import Brand from '../Brand'
 import Styled from './styled'
 
@@ -17,10 +18,8 @@ export interface HeaderProps {
 const Header = ({
   children,
   brand,
-  links,
   brandAlignment = 'left',
 }: HeaderProps): JSX.Element => {
-  console.log(`scroll offset: ${window.scrollY}`)
   // todo: move to global state, when implemented
   const [toggleNavbarHeight, setToggleNavbarHeight] = useState(
     window.pageYOffset < 20,
@@ -36,15 +35,15 @@ const Header = ({
     }
   })
 
-  console.log(brand, links)
-  console.log(toggleNavbarHeight)
   return (
     <Styled.HeaderContainer
       brandAlignment={brandAlignment}
       toggleHeaderHeight={toggleNavbarHeight}
     >
       <Brand image={brand} text="test" />
-      {children}
+      <Styled.NavigationContainer>
+        {children}
+      </Styled.NavigationContainer>
     </Styled.HeaderContainer>
   )
 }

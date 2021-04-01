@@ -10,6 +10,18 @@ module.exports = {
     config.resolve.alias['@'] = path.resolve(__dirname, '../src/')
     return config
   },
+  typescript: {
+    check: false,
+    checkOptions: {},
+    reactDocgen: 'react-docgen-typescript',
+    reactDocgenTypescriptOptions: {
+      shouldExtractLiteralValuesFromEnum: true,
+      propFilter: (prop) =>
+        prop.parent
+          ? !/node_modules/.test(prop.parent.fileName)
+          : true,
+    },
+  },
 }
 function resolve(dir) {
   return path.join(__dirname, dir)
