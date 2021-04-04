@@ -12,7 +12,7 @@ interface BrandLogoProps {
 }
 const BrandLogo = styled.img<BrandLogoProps>`
   src: url(${({ brandLogo }) => brandLogo});
-  height: 40px;
+  height: 60px;
 `
 
 export default { Brand, BrandLogo }

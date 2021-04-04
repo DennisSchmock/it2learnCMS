@@ -17,3 +17,8 @@ export interface RouteProps {
   component: RoutableComponent | FC | FC<RenderRoutesProps>
   routes?: Array<RouteProps>
 }
+
+export interface NavigationLinks {
+  name: string
+  path: string
+}

@@ -1,13 +1,13 @@
 import styled, { css } from 'styled-components'
 import { Link } from 'react-router-dom'
 import theme from '@/theme'
+import { MenuItemPosition } from '../../types/MenuItemTypes'
 
 export type MenuItemContainerProps = {
-  position: Position
+  position?: MenuItemPosition
   selected?: boolean
   anchoredMenu?: boolean
 }
-export type Position = 'first' | 'middle' | 'last' | 'none'
 
 const MenuItemContainer = styled.div<MenuItemContainerProps>`
   display: flex;

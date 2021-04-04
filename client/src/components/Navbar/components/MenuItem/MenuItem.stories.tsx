@@ -2,8 +2,9 @@
 import { Story } from '@storybook/react'
 import React from 'react'
 import StoryRouter from 'storybook-react-router'
+import { MenuItemOptions } from '../../types/MenuItemTypes'
 
-import MenuItem, { MenuItemProps } from './index'
+import MenuItem from './index'
 
 export default {
   title: 'components/Menu/MenuItem',
@@ -11,17 +12,16 @@ export default {
   decorators: [StoryRouter()],
 }
 
-const Template: Story<MenuItemProps> = (args) => (
+const Template: Story<MenuItemOptions> = (args) => (
   <MenuItem {...args} />
 )
 export const Primary = Template.bind({})
 
 Primary.args = {
+  title: 'Main',
+  enabled: true,
+
   navigation: {
-    title: 'Main',
-    enabled: true,
-    navigation: {
-      path: '/',
-    },
+    path: '/',
   },
 }

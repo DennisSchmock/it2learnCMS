@@ -4,7 +4,8 @@ import { Story } from '@storybook/react'
 import React from 'react'
 import StoryRouter from 'storybook-react-router'
 
-import Menu, { MenuProps } from './index'
+import Menu from './index'
+import { MenuOptions } from '../../types/MenuTypes'
 
 export default {
   title: 'components/Menu/Menu',
@@ -12,7 +13,7 @@ export default {
   decorators: [StoryRouter()],
 }
 
-const Template: Story<MenuProps> = (args) => <Menu {...args} />
+const Template: Story<MenuOptions> = (args) => <Menu {...args} />
 export const Primary = Template.bind({})
 
 Primary.args = {}

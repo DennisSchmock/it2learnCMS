@@ -1,17 +1,13 @@
+import { NavigationLinks } from '@/common/types'
 import React, { useEffect, useState } from 'react'
 
 import Brand from '../Brand'
 import Styled from './styled'
 
-interface Links {
-  name: string
-  path: string
-}
-
 export interface HeaderProps {
   brand?: string
   brandAlignment?: 'left' | 'center' | 'right'
-  links?: Links[]
+  links?: NavigationLinks[]
   children?: React.ReactNode
 }
 

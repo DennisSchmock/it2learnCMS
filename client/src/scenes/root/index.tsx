@@ -4,45 +4,32 @@ import { RenderRoutes } from '@/common/router'
 import Footer from '@/components/Footer'
 import Header from '@/components/Header'
 import Logo from '@/assets/images/logo.png'
-import Menu from '@/components/Navbar'
-import Helpers from '@/utils/helpers'
-import MenuItem from '@/components/Navbar/components/MenuItem'
 import { useIsMobile } from '@/utils/hooks'
+import NavBar from '@/components/Navbar/components/Navbar'
+import { MenuOptions } from '@/components/Navbar/types/MenuTypes'
 import Styled from './styled'
-import Config from '../../config.json'
 
-interface RootProps {
-  configuration?: {
-    brandName: string
+export type RootConfiguration = {
+  configuration: {
+    brand: string
+    menu: MenuOptions
   }
 }
 
-const Root = ({ configuration }: RootProps): JSX.Element => {
+const Root = ({ configuration }: RootConfiguration): JSX.Element => {
   const isMobile = useIsMobile()
-  console.log(configuration)
+  if (configuration?.brand === 'test') return <div />
   useEffect(() => {
     console.log(isMobile)
   }, [isMobile])
   return (
     <Styled.Container>
       <Header brand={Logo}>
-        <Menu>
-          {Config.navigation.map((menuConfig, index) => {
-            const position = Helpers.getPosition(
-              index,
-              Config.navigation.length,
-            )
-            const menuItem = { position, ...menuConfig }
-            return (
-              <MenuItem
-                key={menuItem.title}
-                navigation={menuItem}
-                position={menuItem.position}
-                anchoredMenu
-              />
-            )
-          })}
-        </Menu>
+        <NavBar
+          isMobile={isMobile}
+          menuItems={configuration?.menu.menuItems}
+          numberOfItems={3}
+        />
       </Header>
       <RenderRoutes routes={RootRoutes} />
       <Footer />

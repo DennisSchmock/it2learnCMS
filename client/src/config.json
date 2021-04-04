@@ -1,34 +1,44 @@
 {
-  "navigation": [
-    {
-      "title": "Main",
-      "enabled": true,
-      "navigation": {
-        "path": "/"
+  "brand": "",
+  "menu": {
+    "menuItems": [
+      {
+        "title": "Main",
+        "enabled": true,
+        "menuPosition": 0,
+        "navigation": {
+          "path": "/"
+        }
+      },
+      {
+        "title": "Kurser og foredrag",
+        "enabled": true,
+        "selected": true,
+        "menuPosition": 1,
+
+        "navigation": {
+          "path": "/blog"
+        }
+      },
+      {
+        "title": "Playground",
+        "enabled": true,
+        "posimenuPosition": 2,
+
+        "navigation": {
+          "path": "/main/page/Playground"
+        }
+      },
+      {
+        "title": "CV",
+        "enabled": true,
+        "selected": true,
+        "menuPosition": 3,
+
+        "navigation": {
+          "path": "/blog"
+        }
       }
-    },
-    {
-      "title": "Kurser og foredrag",
-      "enabled": true,
-      "selected": true,
-      "navigation": {
-        "path": "/blog"
-      }
-    },
-    {
-      "title": "Playground",
-      "enabled": true,
-      "navigation": {
-        "path": "/main/page/Playground"
-      }
-    },
-    {
-      "title": "CV",
-      "enabled": true,
-      "selected": true,
-      "navigation": {
-        "path": "/blog"
-      }
-    }
-  ]
+    ]
+  }
 }

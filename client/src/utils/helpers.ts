@@ -1,10 +1,9 @@
-import { Position } from '@/components/Navbar/components/MenuItem/styled'
+import { MenuItemPosition } from '@/components/Navbar/types/MenuItemTypes'
 
 const getPosition = (
-  position: number,
   arrayLength: number,
-): Position => {
-  console.log(process.env)
+  position?: number,
+): MenuItemPosition => {
   switch (position) {
     case 0:
       return 'first'
