@@ -23,7 +23,7 @@
       {
         "title": "Playground",
         "enabled": true,
-        "posimenuPosition": 2,
+        "menuPosition": 2,
 
         "navigation": {
           "path": "/main/page/Playground"

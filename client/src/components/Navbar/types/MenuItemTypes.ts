@@ -6,7 +6,6 @@ export type MenuItemOptions = {
   menuPosition?: number
   selected?: boolean
   anchoredMenu?: boolean
-  enabled: boolean
 }
 
 export type Navigation = {

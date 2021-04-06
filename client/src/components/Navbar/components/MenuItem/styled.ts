@@ -7,6 +7,7 @@ export type MenuItemContainerProps = {
   position?: MenuItemPosition
   selected?: boolean
   anchoredMenu?: boolean
+  enabled?: boolean
 }
 
 const MenuItemContainer = styled.div<MenuItemContainerProps>`
@@ -30,6 +31,7 @@ const MenuItemContainer = styled.div<MenuItemContainerProps>`
       css`
         border: solid 1px ${theme.colors.BORDER_COLOR_MENU};
         border-left: none;
+        border-right: none;
       `,
   ]}
   ${({ anchoredMenu }) =>

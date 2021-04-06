@@ -2,14 +2,14 @@ import styled from 'styled-components'
 import theme from '@/theme'
 
 interface HeaderContainerProps {
-  toggleHeaderHeight: boolean
+  toggleHeaderHeight?: boolean
   brandAlignment: string
 }
 
 const HeaderContainer = styled.div<HeaderContainerProps>`
   width: 100%;
   margin: 0 auto;
-  height: ${theme.sizes.HEADER_FULL_HEIGHT};
+  height: ${theme.sizes.HEADER_FULL_HEIGHT}px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;

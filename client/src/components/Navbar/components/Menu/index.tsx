@@ -3,15 +3,18 @@ import helpers from '@/utils/helpers'
 import MenuItem from '../MenuItem'
 import Styled from './styled'
 import Config from '../../../../config.json'
-import { MenuOptions } from '../../types/MenuTypes'
 import { MenuItemOptions } from '../../types/MenuItemTypes'
 
 export interface MenuProps {
   isMobile?: boolean
   menuItems: MenuItemOptions[]
+  anchored?: boolean
 }
 
-const Menu = ({ menuItems }: MenuOptions): JSX.Element => (
+const Menu = ({
+  menuItems,
+  anchored = true,
+}: MenuProps): JSX.Element => (
   <Styled.MenuContainer>
     {menuItems.map((menuConfig) => {
       const position = helpers.getPosition(
@@ -24,7 +27,7 @@ const Menu = ({ menuItems }: MenuOptions): JSX.Element => (
           key={menuItem.title}
           navigation={menuItem.navigation}
           position={menuItem.position}
-          anchoredMenu
+          anchoredMenu={anchored}
           enabled
           title={menuItem.title}
         />
