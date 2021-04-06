@@ -1,5 +1,5 @@
 import React from 'react'
-import main from '@/features/main'
+import main from '@/scenes/main'
 import { RouteProps } from './types'
 
 const RootRoute: RouteProps[] = [
@@ -8,7 +8,7 @@ const RootRoute: RouteProps[] = [
     key: 'ROOT',
     exact: true,
     // eslint-disable-next-line react/display-name
-    component: () => <div>TEST</div>,
+    component: main.screens.MainScreen,
   },
 ]
 
